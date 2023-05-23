@@ -7,3 +7,6 @@
 /index.php
 /restore.php
 /.idea/
+/vendor
+/composer*
+/phpcs.xml
