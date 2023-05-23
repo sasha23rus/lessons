@@ -5,22 +5,22 @@ class Main
 {
 	private object $view;
 	private object $request;
-	private object $comput;
+	private object $compute;
 
 	public function __construct()
 	{
 		$this->view    = new View();
 		$this->request = new Request();
-		$this->comput  = new Compute();
+		$this->compute  = new Compute();
 	}
 	
 	/**
 	 * @return void
 	 */
-	public function init()
+	public function init(): void
 	{
 		$validated  = $this->request->validate();
-		$calc_total = $this->comput->calculate($validated);
+		$calc_total = $this->compute->calculate($validated);
 		$tplData    = [
 			...$validated, 'total' => $calc_total
 		];
@@ -29,5 +29,4 @@ class Main
 		$result .= $this->view->render($tplData, $tplData['page']);
 		echo $result;
 	}
-	
 }

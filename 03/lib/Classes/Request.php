@@ -4,8 +4,8 @@ namespace Lib;
 
 class Request
 {
-	private $ar_method = ["plus", "minus", "multiply", "divide", "equal", "plus", "square", "square_root"];
-	private $ar_pages = ['default_calculator', 'square_root'];
+	private array $ar_method = ["plus", "minus", "multiply", "divide", "equal", "plus", "square", "squareRoot"];
+	private array $ar_pages = ['default_calculator', 'square_root'];
 	
 	/**
 	 * @return array

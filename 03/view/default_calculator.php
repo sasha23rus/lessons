@@ -3,8 +3,12 @@
 	<input type="hidden" name="page" value="<?=$data['page']?>" />
 	<div>
 		<div style="float: left; padding-right: 10px;">
-			<input type="number" name="a" placeholder="A" value="<?=$data['a']?>" />
-			<input type="number" name="b" placeholder="B" value="<?=$data['b']?>" />
+			<label>
+				<input type="number" name="a" placeholder="A" value="<?=$data['a']?>" />
+			</label>
+			<label>
+				<input type="number" name="b" placeholder="B" value="<?=$data['b']?>" />
+			</label>
 		</div>
 		<div>
 			<?php echo $data['total']; ?>

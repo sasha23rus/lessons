@@ -69,7 +69,7 @@ class Compute
 	 * @param $b
 	 * @return string
 	 */
-	private function equal( $a, $b):string
+	private function equal($a, $b):string
 	{
 		return ($a == $b) ? 'A = B' : 'A != B';
 	}
@@ -89,7 +89,7 @@ class Compute
 	 * @param $a
 	 * @return float
 	 */
-	private function square_root($a):float
+	private function squareRoot($a):float
 	{
 		return sqrt($a);
 	}
