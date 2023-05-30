@@ -14,11 +14,18 @@ class Router
 		$this->request = new Request();
 	}
 	
+	/**
+	 * @param array $routes
+	 * @return void
+	 */
 	public function setRoutes(Array $routes): void
 	{
 		$this->routes = $routes;
 	}
 	
+	/**
+	 * @return void
+	 */
 	public function run(): void
 	{
 		$currentRoute = str_replace(LOCAL_PATH, '', $_SERVER['REQUEST_URI']);
@@ -32,6 +39,9 @@ class Router
 		}
 	}
 	
+	/**
+	 * @return string
+	 */
 	public function getContent(): string
 	{
 		return $this->content;
