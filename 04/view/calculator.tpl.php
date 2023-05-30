@@ -11,7 +11,7 @@
 			</label>
 		</div>
 		<div>
-			<?php echo $data['total']; ?>
+			<?=$data['total']?>
 		</div>
 	</div>
 	<br>
@@ -21,6 +21,6 @@
 		<button name="action" value="multiply">*</button>
 		<button name="action" value="divide">/</button>
 		<button name="action" value="equal">= или !=</button>
-		<a href="<?=LOCAL_PATH?>/">Reset</a>
+		<a href="<?=LOCAL_PATH?>/calc">Reset</a>
 	</div>
 </form>

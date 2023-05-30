@@ -1,2 +1,3 @@
 <?php
-	const LOCAL_PATH = '/04';
+
+const LOCAL_PATH = '/04';

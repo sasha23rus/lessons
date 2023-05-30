@@ -1,7 +1,6 @@
 <?php
-	
-	namespace Lib;
-	
+namespace Lib;
+
 class Controller
 {
 	public Compute $compute;
@@ -29,10 +28,10 @@ class Controller
 	{
 		$validated  = $request->validate();
 		$total = $this->compute->calculate($validated);
-		$tplData    = [ ...$validated, 'total' => $total ];
+		$tplData = [ ...$validated, 'total' => $total ];
 		
 		$render = $this->view->render([], 'selector.tpl');
-		$render.= $this->view->render($tplData, 'default_calculator.tpl');
+		$render.= $this->view->render($tplData, 'calculator.tpl');
 		
 		return $render;
 	}
@@ -45,7 +44,7 @@ class Controller
 	{
 		$validated  = $request->validate();
 		$total = $this->compute->calculate($validated);
-		$tplData    = [ ...$validated, 'total' => $total ];
+		$tplData = [ ...$validated, 'total' => $total ];
 		
 		$render = $this->view->render([], 'selector.tpl');
 		$render.= $this->view->render($tplData, 'square.tpl');
