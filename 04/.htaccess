@@ -1,0 +1,11 @@
+php_flag display_errors on
+php_value error_reporting E_ERROR
+#php_value error_reporting -1
+
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) /04/index.php?$1 [QSA,L]
