@@ -3,14 +3,15 @@
 namespace Lib;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
+//use Krugozor\Database\Mysql;
 
 class Database
 {
 	public function init()
 	{
-		$DB = new Capsule();
+		$capsule = new Capsule();
 
-		$DB->addConnection([
+		$capsule->addConnection([
 			'driver' => 'mysql',
 			'host' => DB_HOST,
 			'database' => DB_NAME,
@@ -21,6 +22,7 @@ class Database
 			'prefix' => '',
 		]);
 
-		$DB->bootEloquent();
+		$capsule->bootEloquent();
+		
 	}
 }
