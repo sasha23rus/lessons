@@ -8,7 +8,7 @@ use Twig\Error\SyntaxError;
 use Twig\loader\FilesystemLoader;
 use Twig\Environment;
 
-class View extends Singleton
+class View
 {
 	private $twig;
 	

@@ -3,9 +3,8 @@
 namespace Lib;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
-//use Krugozor\Database\Mysql;
 
-class Database
+class Databasekit
 {
 	public function init()
 	{
@@ -16,13 +15,12 @@ class Database
 			'host' => DB_HOST,
 			'database' => DB_NAME,
 			'username' => DB_USER,
-			'password' => DB_PASSWORD,
+			'password' => DB_PASS,
 			'charset' => 'utf8',
 			'collation' => 'utf8mb3_general_ci',
 			'prefix' => '',
 		]);
 
 		$capsule->bootEloquent();
-		
 	}
 }

@@ -11,13 +11,13 @@ class ArticleController
 	{
 		$articles = Article::get();
 
-		return View::render('Articles', ['articles' => $articles]);
+		return $this->render('Articles', ['articles' => $articles]);
 	}
 
 	public function detail($id): bool|string
 	{
 		$article = Article::where('id', $id)->firstOrFail();
 
-		return View::render('Article', ['article' => $article]);
+		return $this->render('Article', ['article' => $article]);
 	}
 }

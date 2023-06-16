@@ -9,16 +9,14 @@ class Main
 
 	public function __construct()
 	{
-		$this->database = new Database();
+		$this->database = new Databasekit();
 		$this->router = new Router();
 	}
 
 	public function init(): void
 	{
-		echo 'main';
 		$this->database->init();
 		$this->router->init();
-
 
 		echo $this->router->getData();
 	}

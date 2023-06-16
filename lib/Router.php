@@ -35,7 +35,7 @@ class Router
 		$this->router->get('/', [ 'Lib\Controller\HomeController', 'index' ]);
 		$this->router->get('/articles', [ 'Lib\Controller\ArticleController', 'index' ]);
 		$this->router->get('/article/{id}', [ 'Lib\Controller\ArticleController', 'detail' ]);
-		$this->router->get('/404', [ 'Lib\Controller\ErrorController', 'notFound' ]);
+		$this->router->get('/404', [ 'Lib\Controller\ErrorController', 'index' ]);
 	}
 	
 	/**
@@ -44,8 +44,8 @@ class Router
 	private function dispatch(): void
 	{
 		$dispatcher = new Dispatcher($this->router->getData());
-		$url = str_replace(LOCAL_PATH, '', $_SERVER['REQUEST_URI']);
-		//$url = $_SERVER['REQUEST_URI'];//нихера никаких ошибок
+		//$url = str_replace(LOCAL_PATH, '', $_SERVER['REQUEST_URI']);
+		$url = $_SERVER['REQUEST_URI'];//у меня через домен
 		
 		try {
 			$this->data = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], $url);
