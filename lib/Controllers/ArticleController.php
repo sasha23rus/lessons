@@ -5,7 +5,7 @@ namespace Lib\Controller;
 use Lib\Model\Article,
 	Lib\View;
 
-class ArticleController
+class ArticleController extends Router
 {
 	public function index(): bool|string
 	{
